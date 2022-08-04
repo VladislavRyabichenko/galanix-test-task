@@ -1,0 +1,134 @@
+
+
+.galleryContainer {
+    width: 80%;
+    margin-top: 30px;
+
+    --grid-layout-gap: 25px;
+    --grid-column-count: 3;
+    --grid-item--min-width: 230px;
+
+    /**
+     * Calculated values.
+     */
+    --gap-count: calc(var(--grid-column-count) - 1);
+    --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+    --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+    grid-gap: var(--grid-layout-gap);
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightblue;
+
+    transition: ease 0.5s;
+
+    outline: 5px solid darkgray;
+    border-radius: 50%;
+
+    padding-top: 100%;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+
+
+.item:hover {
+    cursor: pointer;
+    outline-color: yellow !important;
+    transform: rotate(45deg);
+    transition: ease 0.5s;
+
+}
+
+.removeContainer {
+    display: none;
+    position: absolute;
+    transform: rotate(-45deg);
+
+    background: rgb(176,129,129,0);
+
+    width: 100px;
+    height: 100%;
+    border-radius: 0 50% 50% 50%;
+    overflow: hidden;
+
+    top: 25%;
+    left: 10%;
+
+    /*right: 0;*/
+    transition: ease 1s;
+
+}
+
+.item:hover .removeContainer  {
+    transition: ease 1s;
+    background: rgb(176,129,129,0.5);
+    display: flex;
+}
+
+.removeContainer button {
+    border: none;
+    width: 100%;
+    padding: 20px;
+
+
+
+    background: rgb(180, 96, 96, 0.9);
+}
+
+.removeContainer button:hover {
+    cursor: pointer;
+    background: rgb(180, 96, 96, 1);
+}
+
+.removeContainer button:active {
+    cursor: pointer;
+    background: rgb(185, 76, 76);
+}
+
+.reestablishBtnContainer {
+    width: 100%;
+    margin: 30px 0;
+
+}
+
+
+
+@media all and (min-width: 925px){
+    .item:nth-child(3n + 1) {
+        outline-color: #bc0029;
+        background: pink;
+    }
+}
+
+@media all and (max-width: 924px){
+    .item:nth-child(2n + 1) {
+        outline-color: #bc0029;
+        background: pink;
+    }
+}
+@media all and (max-width: 600px){
+    .item{
+        outline-color: #bc0029;
+        background: pink;
+    }
+}
+
+
+
+
+

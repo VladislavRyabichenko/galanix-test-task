@@ -1,0 +1,66 @@
+
+.modalContainer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    background: rgb(124, 119, 119, 50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer {
+    width: 75%;
+    height: 80%;
+
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.imageContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.btnContainer {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+
+    background: red;
+}
+
+.btnContainer:hover{
+    outline: 3px solid #bc0029;
+    cursor: pointer;
+}
+
+.btnContainer button{
+    border: none;
+    background: white;
+}
+
+.btnContainer button:hover{
+
+    cursor: pointer;
+}
+
+.btnContainer button img{
+    width: 100%;
+    height: 100%;
+}
+
+@media all and (max-width: 768px){
+
+    .imageContainer {
+        width: 95%;
+        height: 80%;
+    }
+}

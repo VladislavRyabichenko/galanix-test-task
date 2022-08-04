@@ -1,0 +1,14 @@
+.headerContainer {
+    width: 100%;
+    height: 50px;
+    background: #ea9393;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.dateContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+}
