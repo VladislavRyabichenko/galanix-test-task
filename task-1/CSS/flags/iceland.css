@@ -1,0 +1,44 @@
+.iceland {
+    background: #00519b;
+    /*border: 1px solid #000;*/
+}
+
+
+
+.iceland .horizontal-bar-white{
+    position: absolute;
+    background: white;
+    height: 35px;
+    width: 100%;
+    top:60px;
+}
+
+.iceland .vertical-bar-white{
+    position: absolute;
+    width: 48px;
+
+    height: 100%;
+    left: 84px;
+
+    background: white;
+
+}
+
+.iceland .horizontal-bar-red{
+    position: absolute;
+    background: #dc1832;
+    height: 15px;
+    width: 100%;
+    top: 70px
+
+}
+
+.iceland .vertical-bar-red{
+    position: absolute;
+    width: 25px;
+
+    height: 100%;
+    left: 95px;
+
+    background: #dc1832;
+}

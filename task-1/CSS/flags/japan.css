@@ -1,0 +1,15 @@
+.japan {
+    background: white;
+}
+
+.circle {
+    position: absolute;
+
+    width: 107px;
+    height: 110px;
+    background: #bc0029;
+
+    border-radius: 50%;
+    top: 20px;
+    left:97px;
+}
